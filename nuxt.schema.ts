@@ -56,21 +56,23 @@ export default defineNuxtSchema({
             })
           }
         }),
-        primary: field({
-          type: 'string',
-          title: 'Primary',
-          description: 'Primary color of your UI.',
-          icon: 'i-mdi-palette-outline',
-          default: 'green',
-          required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black']
-        }),
-        gray: field({
-          type: 'string',
-          title: 'Gray',
-          description: 'Gray color of your UI.',
-          icon: 'i-mdi-palette-outline',
-          default: 'slate',
-          required: ['slate', 'cool', 'zinc', 'neutral', 'stone']
+        colors: group({
+          primary: field({
+            type: 'string',
+            title: 'Primary',
+            description: 'Primary color of your UI.',
+            icon: 'i-mdi-palette-outline',
+            default: 'green',
+            required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black']
+          }),
+          neutral: field({
+            type: 'string',
+            title: 'Neutral',
+            description: 'Neutral color of your UI.',
+            icon: 'i-mdi-palette-outline',
+            default: 'slate',
+            required: ['slate', 'cool', 'zinc', 'neutral', 'stone']
+          })
         })
       }
     }),

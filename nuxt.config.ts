@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui-pro',
@@ -39,6 +38,7 @@ export default defineNuxtConfig({
         prefix: 'custom',
         dir: './app/assets/icons'
       }
-    ]
+    ],
+    provider: 'iconify',
   },
 })

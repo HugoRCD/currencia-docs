@@ -3,10 +3,10 @@ name: ci
 on:
   push:
     branches:
-      - v3
+      - main
   pull_request:
     branches:
-      - v3
+      - main
 
 jobs:
   ci:
@@ -21,20 +21,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: bun install
 
       - name: Lint
-        run: pnpm run lint
+        run: bun run lint
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: bun run typecheck

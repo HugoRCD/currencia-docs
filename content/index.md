@@ -1,15 +1,13 @@
 ---
 seo:
-  title: Nuxt UI Pro - Docs template.
-  description: Nuxt UI Pro is a collection of premium Vue components built on top
-    of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+  title: Currencia Documentation
+  description: Currencia Technical Documentation
 ---
 
 ::u-page-hero
 ---
 orientation: horizontal
 ---
-
 #title
 Currencia Technical Documentation
 

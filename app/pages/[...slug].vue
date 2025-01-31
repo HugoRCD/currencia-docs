@@ -36,12 +36,14 @@ defineOgImageComponent('Docs')
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value))
 
-const links = computed(() => [toc?.bottom?.edit && {
-  icon: 'i-lucide-external-link',
-  label: 'Edit this page',
-  to: `${toc.bottom.edit}/${page?.value?.stem}.md`,
-  target: '_blank'
-}, ...(toc?.bottom?.links || [])].filter(Boolean))
+const links = computed(() => [
+  toc?.bottom?.edit && {
+    icon: 'i-lucide-external-link',
+    label: 'Edit this page',
+    to: `${toc.bottom.edit}/${page?.value?.stem}.md`,
+    target: '_blank'
+  }, ...(toc?.bottom?.links || [])
+].filter(Boolean))
 </script>
 
 <template>
@@ -50,7 +52,7 @@ const links = computed(() => [toc?.bottom?.edit && {
       :title="page.title"
       :description="page.description"
       :links="page.links"
-      :headline="headline"
+      :headline
     />
 
     <UPageBody>
@@ -61,7 +63,7 @@ const links = computed(() => [toc?.bottom?.edit && {
 
       <USeparator v-if="surround?.length" />
 
-      <UContentSurround :surround="surround" />
+      <UContentSurround :surround />
     </UPageBody>
 
     <template
@@ -87,7 +89,7 @@ const links = computed(() => [toc?.bottom?.edit && {
 
             <UPageLinks
               :title="toc.bottom.title"
-              :links="links"
+              :links
             />
           </div>
         </template>

@@ -30,8 +30,8 @@ const { header } = useAppConfig()
             class="h-6 w-auto"
           />
           <span>
-          Currencia
-        </span>
+            Currencia
+          </span>
         </div>
       </template>
       <template v-else>
@@ -63,7 +63,7 @@ const { header } = useAppConfig()
     <template #content>
       <UContentNavigation
         highlight
-        :navigation="navigation"
+        :navigation
       />
     </template>
   </UHeader>

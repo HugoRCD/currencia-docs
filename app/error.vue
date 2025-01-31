@@ -28,14 +28,14 @@ provide('navigation', navigation)
   <div>
     <AppHeader />
 
-    <UError :error="error" />
+    <UError :error />
 
     <AppFooter />
 
     <ClientOnly>
       <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
+        :files
+        :navigation
       />
     </ClientOnly>
   </div>

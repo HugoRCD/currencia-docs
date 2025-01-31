@@ -24,10 +24,15 @@ const { header } = useAppConfig()
 
     <template #title>
       <template v-if="header?.logo?.dark || header?.logo?.light">
-        <UColorModeImage
-          v-bind="header?.logo"
-          class="h-6 w-auto"
-        />
+        <div class="flex items-center gap-1">
+          <UColorModeImage
+            v-bind="header?.logo"
+            class="h-6 w-auto"
+          />
+          <span>
+          Currencia
+        </span>
+        </div>
       </template>
       <template v-else>
         Nuxt UI Pro <UBadge

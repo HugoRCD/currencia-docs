@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui-pro',
     '@nuxt/content',
-    '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
     'nuxt-og-image'
@@ -30,12 +29,12 @@ export default defineNuxtConfig({
     }
   },
 
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons'
       }
-    }
-  }
+    ]
+  },
 })

@@ -5,7 +5,7 @@ const { footer } = useAppConfig()
 <template>
   <UFooter>
     <template #left>
-      {{ footer.credits }}
+      Copyright © {{ new Date().getFullYear() }}
     </template>
 
     <template #right>

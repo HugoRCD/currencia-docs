@@ -1,8 +1,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'green',
-      neutral: 'slate'
+      primary: 'orange',
+      neutral: 'neutral'
     }
   },
   uiPro: {
@@ -14,41 +14,35 @@ export default defineAppConfig({
     }
   },
   seo: {
-    siteName: 'Nuxt UI Pro - Docs template'
+    siteName: 'Currencia Documentation'
   },
   header: {
     logo: {
-      alt: '',
-      light: '',
-      dark: ''
+      alt: 'Currencia logo',
+      light: '/assets/logo.png',
+      dark: '/assets/logo.png'
     },
     search: true,
     colorMode: true,
     links: [{
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt-ui-pro/docs',
+      'to': 'https://github.com/hugorcd/currencia',
       'target': '_blank',
-      'aria-label': 'Docs template on GitHub'
+      'aria-label': 'Currencia on GitHub'
     }]
   },
   footer: {
-    credits: 'Copyright © 2023',
     colorMode: false,
     links: [{
-      'icon': 'i-simple-icons-nuxtdotjs',
-      'to': 'https://nuxt.com',
+      'icon': 'i-custom-currencia',
+      'to': 'https://app.currencia.hrcd.fr/app/market',
       'target': '_blank',
-      'aria-label': 'Nuxt Website'
-    }, {
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://discord.com/invite/ps2h6QT',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on Discord'
+      'aria-label': 'Currencia'
     }, {
       'icon': 'i-simple-icons-x',
-      'to': 'https://x.com/nuxt_js',
+      'to': 'https://x.com/hugorcd__',
       'target': '_blank',
-      'aria-label': 'Nuxt on X'
+      'aria-label': 'HugoRCD on X'
     }, {
       'icon': 'i-simple-icons-github',
       'to': 'https://github.com/nuxt/ui',
@@ -60,23 +54,14 @@ export default defineAppConfig({
     title: 'Table of Contents',
     bottom: {
       title: 'Community',
-      edit: 'https://github.com/nuxt-ui-pro/docs/edit/v3/content',
+      edit: 'https://github.com/hugorcd/currencia-docs/edit/content',
       links: [{
         icon: 'i-lucide-star',
-        label: 'Star on GitHub',
-        to: 'https://github.com/nuxt/ui',
+        label: 'Report an issue',
+        to: 'https://github.com/hugorcd/currencia/issues',
         target: '_blank'
-      }, {
-        icon: 'i-lucide-book-open',
-        label: 'Nuxt UI Pro docs',
-        to: 'https://ui.nuxt.com/pro/guide',
-        target: '_blank'
-      }, {
-        icon: 'i-simple-icons-nuxtdotjs',
-        label: 'Purchase a license',
-        to: 'https://ui.nuxt.com/pro/purchase',
-        target: '_blank'
-      }]
+      }
+      ]
     }
   }
 })

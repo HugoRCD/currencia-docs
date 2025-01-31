@@ -26,20 +26,20 @@ const page = computed(() => data.value?.page)
 const surround = computed(() => data.value?.surround)
 
 useSeoMeta({
-  title: page.value.seo.title,
-  ogTitle: `${page.value.seo.title} - ${seo?.siteName}`,
-  description: page.value.seo.description,
-  ogDescription: page.value.seo.description
+  title: page.value?.seo.title,
+  ogTitle: `${page.value?.seo.title} - ${seo?.siteName}`,
+  description: page.value?.seo.description,
+  ogDescription: page.value?.seo.description
 })
 
 defineOgImageComponent('Docs')
 
-const headline = computed(() => findPageHeadline(navigation.value, page.value))
+const headline = computed(() => findPageHeadline(navigation?.value, page.value))
 
 const links = computed(() => [toc?.bottom?.edit && {
   icon: 'i-lucide-external-link',
   label: 'Edit this page',
-  to: `${toc.bottom.edit}/${page?.value?.path}`,
+  to: `${toc.bottom.edit}/${page?.value?.stem}.md`,
   target: '_blank'
 }, ...(toc?.bottom?.links || [])].filter(Boolean))
 </script>

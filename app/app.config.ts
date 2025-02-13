@@ -6,6 +6,11 @@ export default defineAppConfig({
     }
   },
   uiPro: {
+    prose: {
+      img: {
+        base: 'rounded-lg'
+      }
+    },
     footer: {
       slots: {
         root: 'border-t border-(--ui-border)',
@@ -61,7 +66,7 @@ export default defineAppConfig({
       edit: 'https://github.com/hugorcd/currencia-docs/edit/content',
       links: [
         {
-          icon: 'i-lucide-star',
+          icon: 'i-lucide-life-buoy',
           label: 'Report an issue',
           to: 'https://github.com/hugorcd/currencia/issues',
           target: '_blank'
